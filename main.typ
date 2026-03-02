@@ -186,11 +186,35 @@ La protección física del nodo fue diseñada íntegramente en *FreeCAD* y fabri
 - *Estructura:* La carcasa cuenta con un diseño modular que permite un fácil acceso a los componentes internos para mantenimiento, además de orificios y compartimientos estratégicos para la disipación de calor y la protección contra el ingreso de partículas.
 - *Hermeticidad:* Se incorporó pegamento a prueba de agua para sellar las uniones mecánicas y evitar la entrada de humedad o partículas contaminantes al sistema.
 
+#v(2em)
 
-*IMAGENES DEL PROTOTIPO MONTADO*
+#grid(columns:2,
+  rows: 2,
+  gutter: 18pt,
+  grid.cell(
+    figure(
+      image("imagenes/3d model.png", width: 80%),
+      caption: [Diseño 3D del prototipo en FreeCAD, vista general.],
+    )
+  ),
+  grid.cell(
+    figure(
+      image("imagenes/cover-cam.png", width: 80%),
+      caption: [Pieza de protección del lente diseñada para evitar la entrada de hollín y humedad.],
+    )
+  ),
+  grid.cell(
+    figure(
+      image("imagenes/case-top.png", width: 80%),
+      caption: [Vista inferior de la tapa y soporte de la raspberry, con soportes en altura para ventilación y protección de la electrónica.],
+    )
+  )
+
+)
 
 
-#v(1em)
+
+#v(2em)
 
 = Ecosistema de Software
 El sistema se divide en dos capas principales para asegurar la modularidad y facilitar una futura publicación científica.
