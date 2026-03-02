@@ -113,7 +113,7 @@ Diseño, montaje e instalación del hardware básico para la creación de un dat
 
 #grid(columns:2,
   rows: 2,
-  gutter: 21pt,
+  gutter: 18pt,
   grid.cell(
     figure(
       image("imagenes/whiteboard_diagram.jpeg", width: 80%),
@@ -135,7 +135,7 @@ Diseño, montaje e instalación del hardware básico para la creación de un dat
   grid.cell(
     figure(
       image("imagenes/prototype_case.jpeg", width: 80%),
-      caption: [Carcasa diseñada para la protección del hardware.],
+      caption: [Prototipo de carcasa diseñada para la protección del hardware.],
     )
 
   )
