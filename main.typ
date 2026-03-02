@@ -1,4 +1,7 @@
 // --- CONFIGURACIÓN DEL TEMPLATE ---
+#set figure(supplement: none)
+
+//
 #let proyecto = (
   titulo: "Proyecto AEGON",
   subtitulo: "Sistema de monitoreo de gases con imágenes",
@@ -80,7 +83,7 @@ La iniciativa busca aplicar tecnologías de Industria 4.0 (IoT + IA) para digita
 
 #v(1em)
 
-== El Problema y Justificación Técnica
+== Problema y Justificación Técnica
 Tras una evaluación en terreno, se determinó que los métodos tradicionales de monitoreo son inviables para este contexto específico por las siguientes razones:
 
 - *Hostilidad del ambiente:* Las temperaturas en las chimeneas oscilan entre los $176°C$ y $279°C$. Los sensores básicos de gases *in-situ* se derriten o saturan bajo estas condiciones.
@@ -103,10 +106,47 @@ Se ha optado por un sistema de *Visión Computacional*, el cual permite una eval
 = Plan de Trabajo Académico
 El desarrollo del proyecto se estructura en cuatro fases clave, ejecutadas por estudiantes de ingeniería bajo supervisión docente:
 
-1. *Fase 1: Recolección de Datos (Enero - Marzo):* Diseño, montaje e instalación del hardware básico para la creación de un dataset con imágenes en diferentes estados de la caldera, condiciones climáticas y horarios.
-2. *Fase 2: Entrenamiento del Modelo:* Desarrollo de algoritmos en Python y entrenamiento de una red neuronal ligera (TensorFlow Lite) para distinguir entre vapor de agua e hidrocarburos.
-3. *Fase 3: Despliegue y Dashboard:* Implementación de una interfaz web para la visualización de un "Semáforo de Emisiones" y alertas preventivas en tiempo real.
-4. *Fase 4: Escalamiento Tecnológico:* Transición del análisis cualitativo al cuantitativo mediante técnicas de espectroscopía (DOAS), *sujeto a disponibilidad de fondos futuros*.
+== *Fase 1: Recolección de Datos (Enero - Marzo):*
+Diseño, montaje e instalación del hardware básico para la creación de un dataset con imágenes en diferentes estados de la caldera, condiciones climáticas y horarios.
+
+== Imágenes
+
+#grid(columns:2,
+  rows: 2,
+  gutter: 21pt,
+  grid.cell(
+    figure(
+      image("imagenes/whiteboard_diagram.jpeg", width: 80%),
+      caption: [Diagrama de módulos, con direcciones IP y calculos de tamaño en disco.],
+    )
+  ),
+  grid.cell(
+    figure(
+      image("imagenes/logs_backend.jpeg", width: 80%),
+      caption: [Registros de ejecución del servidor detallando eventos de sistema. ],
+    )
+  ),
+  grid.cell(
+    figure(
+      image("imagenes/prototype_1st_meeting.jpeg", width: 80%),
+      caption: [Estado del prototipo durante la primera reunión.],
+    )
+  ),
+  grid.cell(
+    figure(
+      image("imagenes/prototype_case.jpeg", width: 80%),
+      caption: [Carcasa diseñada para la protección del hardware.],
+    )
+
+  )
+)
+
+== *Fase 2: Entrenamiento del Modelo:*
+Desarrollo de algoritmos en Python y entrenamiento de una red neuronal ligera (TensorFlow Lite) para distinguir entre vapor de agua e hidrocarburos.
+== *Fase 3: Despliegue y Dashboard:*
+Implementación de una interfaz web para la visualización de un "Semáforo de Emisiones" y alertas preventivas en tiempo real.
+== *Fase 4: Escalamiento Tecnológico:*
+Transición del análisis cualitativo al cuantitativo mediante técnicas de espectroscopía (DOAS), *sujeto a disponibilidad de fondos futuros*.
 
 El proyecto actualmente se encuentra en la fase de recolección de datos, con el prototipo de hardware adportas de ser instalado para la captura de imágenes.
 
