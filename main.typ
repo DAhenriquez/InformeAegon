@@ -105,8 +105,8 @@ Se ha optado por un sistema de *Visión Artificial*, el cual permite una evaluac
 = Plan de Trabajo Académico
 El desarrollo del proyecto se estructura en cuatro fases clave, ejecutadas por estudiantes de ingeniería bajo supervisión docente:
 
-== *Fase 1: Recolección de Datos (Enero - Marzo):*
-Diseño, montaje e instalación del hardware básico para la creación de un dataset con imágenes en diferentes estados de la caldera, condiciones climáticas y horarios.
+== *Fase 1: Diseño del prototipo mínimo viable:*
+Diseño y montaje del hardaware básico para la creación de un dataset con imágenes en diferentes estados de la caldera, condiciones climáticas y horarios.
 
 === Imágenes
 
@@ -140,11 +140,11 @@ Diseño, montaje e instalación del hardware básico para la creación de un dat
   )
 )
 
-== *Fase 2: Entrenamiento del Modelo:*
-Desarrollo de algoritmos en Python y entrenamiento de una red neuronal para distinguir entre vapor de agua e hidrocarburos.
-== *Fase 3: Despliegue y Dashboard:*
-Implementación de una interfaz web para la visualización de un "Semáforo de Emisiones" y alertas preventivas en tiempo real.
-== *Fase 4: Escalamiento Tecnológico:*
+== *Fase 2: Recolección de datos*
+Instalación del prototipo en terreno para la captura de imágenes cada 30 segundos, con el objetivo de construir un dataset representativo de las condiciones operativas y ambientales.
+== *Fase 3: Entrenamiento del modelo*
+Se utilizará el dataset creado en la fase anterior para la implementación de modelos de clasificación cualitativa (vapor vs hidrocarburos) utilizando técnicas de visión artificial, con el objetivo de validar la viabilidad del enfoque y generar alertas tempranas.
+== *Fase 4: Escalamiento tecnológico:*
 Transición del análisis cualitativo al cuantitativo mediante técnicas de espectroscopía (DOAS), *sujeto a disponibilidad de fondos futuros*.
 
 
