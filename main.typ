@@ -3,7 +3,7 @@
 
 //
 #let proyecto = (
-  titulo: "Proyecto AEGON",
+  titulo: "Proyecto EAGON",
   subtitulo: "Sistema de monitoreo de gases con imágenes",
   autores: "Flavio Jara, Diego Henríquez",
   universidad: "Universidad Autónoma de Chile, sede Temuco",
@@ -78,8 +78,8 @@
 
 #v(1em)
 
-El proyecto AEGON surge de la necesidad de modernizar el monitoreo ambiental en la planta industrial *EAGON*, mediante una alianza estratégica con la carrera de Ingeniería Civil Informática de la Universidad Autónoma de Chile. 
-La iniciativa busca aplicar tecnologías de Industria 4.0 (IoT + IA) para digitalizar y alertar sobre el estado de las emisiones en calderas.
+El proyecto EAGON surge de la necesidad de monitorear el impacto ambiental en la planta industrial *EAGON*, mediante una alianza estratégica con la carrera de Ingeniería Civil Informática de la Universidad Autónoma de Chile.
+La iniciativa busca aplicar tecnologías de Industria 4.0 (IoT + ML) para digitalizar y alertar sobre el estado de las emisiones en calderas.
 
 #v(1em)
 
@@ -92,14 +92,13 @@ Tras una evaluación en terreno, se determinó que los métodos tradicionales de
 
 #v(1em)
 
-== Solución Propuesta: Visión Artificial
-Se ha optado por un sistema de *Visión Computacional*, el cual permite una evaluación no invasiva al operar de forma externa a la salida de la chimenea.
-
+== Solución Propuesta
+Se ha optado por un sistema de *Visión Artificial*, el cual permite una evaluación no invasiva al operar de forma externa a la salida de la chimenea.
 
 
 - *Hardware:* El nodo sensor utiliza una *Raspberry Pi 5* conectada a un módulo óptico de alta resolución para la captura de imágenes cada 30 segundos.
 - *Diseño Mecánico:* Se ha diseñado una carcasa industrial a medida mediante *FreeCAD* e impresión 3D en filamento ABS para proteger la electrónica de las condiciones climáticas y ambientales.
-- *Procesamiento (Edge Computing):* La Raspberry procesa las imágenes internamente utilizando algoritmos de visión artificial para calcular la densidad y color de la pluma.
+- *Procesamiento Local (Edge Computing):* La Raspberry procesa las imágenes internamente utilizando algoritmos de visión artificial para calcular la densidad y color de la pluma.
 
 #v(1em)
 
@@ -109,7 +108,7 @@ El desarrollo del proyecto se estructura en cuatro fases clave, ejecutadas por e
 == *Fase 1: Recolección de Datos (Enero - Marzo):*
 Diseño, montaje e instalación del hardware básico para la creación de un dataset con imágenes en diferentes estados de la caldera, condiciones climáticas y horarios.
 
-== Imágenes
+=== Imágenes
 
 #grid(columns:2,
   rows: 2,
@@ -142,19 +141,19 @@ Diseño, montaje e instalación del hardware básico para la creación de un dat
 )
 
 == *Fase 2: Entrenamiento del Modelo:*
-Desarrollo de algoritmos en Python y entrenamiento de una red neuronal ligera (TensorFlow Lite) para distinguir entre vapor de agua e hidrocarburos.
+Desarrollo de algoritmos en Python y entrenamiento de una red neuronal para distinguir entre vapor de agua e hidrocarburos.
 == *Fase 3: Despliegue y Dashboard:*
 Implementación de una interfaz web para la visualización de un "Semáforo de Emisiones" y alertas preventivas en tiempo real.
 == *Fase 4: Escalamiento Tecnológico:*
 Transición del análisis cualitativo al cuantitativo mediante técnicas de espectroscopía (DOAS), *sujeto a disponibilidad de fondos futuros*.
+
 
 El proyecto actualmente se encuentra en la fase de recolección de datos, con el prototipo de hardware adportas de ser instalado para la captura de imágenes.
 
 #v(1em)
 
 = Valor Agregado e Innovación
-El proyecto transforma la inspección manual en una vigilancia digital completa. Al correlacionar el análisis visual con los datos físicos de la caldera (temperatura, vapor, oxígeno), se logra una robustez predictiva que 
-permite optimizar la operación y posicionar a la empresa en liderazgo tecnológico ambiental.
+El proyecto transforma la inspección manual en un monitoreo digital completo. Al correlacionar el análisis visual con los datos físicos de la caldera (temperatura, vapor, oxígeno), se logra una robustez predictiva que permite optimizar la operación y posicionar a la empresa en liderazgo tecnológico ambiental.
 
 #v(1em)
 
@@ -168,7 +167,7 @@ El prototipo se ha diseñado de forma robusta para que sea capaz de soportar las
 Se ha seleccionado la *Raspberry Pi 5* como núcleo del sistema debido a su alta capacidad de procesamiento, necesaria para gestionar la captura de imágenes de alta resolución y el envío en de estas a la nube DropBox en tiempo real. 
 
 - *Gestión Térmica:* Debido a las altas temperaturas del sitio de operación, es obligatorio el uso de un Active Cooler para asegurar la durabilidad y el rendimiento constante del equipo.
-- *Sistema Operativo:* El dispositivo opera con Raspberry Pi OS (64-bit)  sin interfaz gráfica, optimizado para la ejecución de scripts en Python.
+- *Sistema Operativo:* El dispositivo opera con Raspberry Pi OS sin interfaz gráfica, optimizado para la ejecución de scripts.
 
 #v(1em)
 
@@ -182,7 +181,7 @@ Para la vigilancia de la pluma de gases, se integró una cámara Raspberry Pi de
 == Diseño Mecánico y Carcasa (FreeCAD)
 La protección física del nodo fue diseñada íntegramente en *FreeCAD* y fabricada mediante impresión 3D.
 
-- *Material:* Se utilizó filamento *PLA*, seleccionado por su temperatura de deformación ($50-60°C$) apta para las condiciones, por su facilidad de impresión y su bajo costo.
+- *Material:* Se utilizó filamento *PLA*, seleccionado por su temperatura de deformación ($50-60°"C"$) apta para las condiciones, por su facilidad de impresión y su bajo costo.
 - *Estructura:* La carcasa cuenta con un diseño modular que permite un fácil acceso a los componentes internos para mantenimiento, además de orificios y compartimientos estratégicos para la disipación de calor y la protección contra el ingreso de partículas.
 - *Hermeticidad:* Se incorporó pegamento a prueba de agua para sellar las uniones mecánicas y evitar la entrada de humedad o partículas contaminantes al sistema.
 
@@ -193,7 +192,7 @@ La protección física del nodo fue diseñada íntegramente en *FreeCAD* y fabri
   gutter: 18pt,
   grid.cell(
     figure(
-      image("imagenes/3d model.png", width: 80%),
+      image("imagenes/3d model.png", width: 108%),
       caption: [Diseño 3D del prototipo en FreeCAD, vista general.],
     )
   ),
@@ -204,6 +203,7 @@ La protección física del nodo fue diseñada íntegramente en *FreeCAD* y fabri
     )
   ),
   grid.cell(
+    colspan: 2,
     figure(
       image("imagenes/case-top.png", width: 80%),
       caption: [Vista inferior de la tapa y soporte de la raspberry, con soportes en altura para ventilación y protección de la electrónica.],
@@ -216,24 +216,24 @@ La protección física del nodo fue diseñada íntegramente en *FreeCAD* y fabri
 
 #v(2em)
 
-= Ecosistema de Software
-El sistema se divide en dos capas principales para asegurar la modularidad y facilitar una futura publicación científica.
+= Estructura de Software
+El sistema se divide en dos secciones para asegurar la modularidad y facilitar una futura publicación científica.
 
 #v(1em)
 
-== Almacenamiento y Conectividad
+== Almacenamiento
 Para garantizar la integridad de los datos ante posibles fallos de red:
-- *Red:* Se implementó una conexión a red mediante un cable Ethernet para asegurar la continuidad en la transmisión de datos.
-- *Logística de Datos:* El sistema está configurado para realizar envíos secuenciales constantes de las imágenes capturadas a una nube (DropBox) luego de que estas mismas ya hayan sido procesada (recorte, corrección de color, escala de grises y compresión), disminuyendo considerablemnte el peso de las imágenes, para así evitar la saturación de la red inalámbrica del recinto.
+- *Red:* Se implementará una conexión a red mediante un cable Ethernet para asegurar la continuidad en la transmisión de datos.
+- *Envío de Datos:* El sistema está configurado para realizar envíos secuenciales constantes de las imágenes capturadas a una nube (DropBox) luego de que estas mismas ya hayan sido procesada (recorte, corrección de color, escala de grises y compresión), disminuyendo considerablemnte el peso de las imágenes, evitando una carga excesiva en la red.
 - *Seguridad:* Se han implementado medidas de seguridad básicas como el uso de credenciales seguras para la conexión tanto a la nube, como a la misma Raspberry Pi.
 
 #v(1em)
 
 == Gestión de errores
-El sistema cuenta con un mecanismo de monitoreo interno que detecta y registra cualquier anomalía en la captura o transmisión de datos. En caso de detectar un error crítico, se activa un protocolo de reinicio automático del nodo para intentar restablecer la funcionalidad sin intervención manual.
+El sistema cuenta con un mecanismo de monitoreo interno que detecta y registra cualquier anomalía en la captura o transmisión de datos.
 - *Registro de eventos:* Todos los errores y eventos importantes se registran en un archivo de log para su posterior análisis y mejora continua del sistema.
-- *Falla en la captura:* En caso de una falla en la captura ded una imagen, el sistema está diseñado para continuar operando y capturando nuevas imágenes, asegurando que la falta de transmisión no afecte la continuidad del monitoreo.
-- *Fallas en sistema de envío:* El sistema de envío cuenta con un mecanismo de manejo de excepciones diseñado para mitigar fallos por conectividad intermitente. Ante un error de envío, el nodo ejecuta un reintento atómico y, de persistir la falla, continúa con la secuencia de monitoreo para proteger la integridad de la operación. Esta estrategia de 'fallo silencioso' se sustenta en una frecuencia de muestreo redundante, lo que garantiza que la base de datos mantenga la densidad de información requerida para los modelos de aprendizaje profundo.
+- *Falla en la captura:* En caso de una falla en la captura de una imagen, el sistema está diseñado para continuar operando y capturando nuevas imágenes, asegurando que la falta de transmisión no afecte la continuidad del monitoreo.
+- *Fallas en sistema de envío:* El sistema de envío cuenta con un mecanismo de manejo de excepciones diseñado para mitigar fallos por conectividad intermitente. Ante un error de envío, continúa con la secuencia de monitoreo para proteger la integridad de la operación. Esta estrategia de 'fallo silencioso' se sustenta en una frecuencia de muestreo redundante, lo que garantiza que la base de datos mantenga la densidad de información requerida para los modelos de aprendizaje profundo.
 
 = Próximos Pasos
 1. Instalación del prototipo en terreno para la recolección de datos hasta el mes de junio, con un plan de captura de imágenes cada 30 segundos.
