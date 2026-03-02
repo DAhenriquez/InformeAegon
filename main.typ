@@ -19,7 +19,6 @@
 )
 
 #set text(
-  font: "Linux Libertine", 
   size: 12pt,
   lang: "es"
 )
